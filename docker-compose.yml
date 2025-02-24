@@ -11,7 +11,7 @@ services:
         # shared storage drive as your host system sees it
         # (i.e. if your host OS is macOS, it should be a Mac-type
         # path starting with /Volumes/)
-        source: ~/Documents/KollaborateServer/Storage
+        source: /mnt/.ix-apps/docker/volumes/mam/_data
       - ./web:/var/www:delegated
     depends_on:
       - database
