@@ -1,0 +1,37 @@
+<svg id="Dots" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 160 160">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: 10.833px;
+      }
+
+      .cls-1, .cls-3 {
+        stroke: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        stroke-width: 0;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="80" cy="80" r="76.812"/>
+  <path class="cls-2" d="M119.986,2.383l12.4,7.381L92.469,77.069,80.011,69.693ZM80.152,71.44a13.006,13.006,0,1,1-12.762,13A12.884,12.884,0,0,1,80.152,71.44Z"/>
+  <path class="cls-3" d="M67.35,20.255l10.617-2.521,3.361,14.156L70.711,34.412Z"/>
+  <path id="Rectangle_2_copy" data-name="Rectangle 2 copy" class="cls-3" d="M42.169,32.768l7.738-7.1,9.723,10.361-7.738,7.1Z"/>
+  <path id="Rectangle_2_copy_2" data-name="Rectangle 2 copy 2" class="cls-3" d="M25.439,52.329L32.2,43.236l11.568,8.537-6.764,9.093Z"/>
+  <path id="Rectangle_2_copy_3" data-name="Rectangle 2 copy 3" class="cls-3" d="M18.546,78.384L18.584,67.41l14.271,0.117L32.818,78.5Z"/>
+  <path id="Rectangle_2_copy_4" data-name="Rectangle 2 copy 4" class="cls-3" d="M25.646,106.644l-5.409-9.971,12.112-7.291,5.409,9.971Z"/>
+  <path id="Rectangle_2_copy_5" data-name="Rectangle 2 copy 5" class="cls-3" d="M39.408,127.519l-6.932-8.982L43,109.088l6.932,8.982Z"/>
+  <path id="Rectangle_2_copy_6" data-name="Rectangle 2 copy 6" class="cls-3" d="M63.819,139.377L53.266,136.6l3.7-14.071,10.553,2.777Z"/>
+  <path id="Rectangle_2_copy_7" data-name="Rectangle 2 copy 7" class="cls-3" d="M92.81,139.423l-10.958,2.854L77.88,128.49l10.958-2.854Z"/>
+  <path id="Rectangle_2_copy_8" data-name="Rectangle 2 copy 8" class="cls-3" d="M115.9,130.821l-10.249,4.836-6.184-12.98,10.249-4.836Z"/>
+  <path id="Rectangle_2_copy_9" data-name="Rectangle 2 copy 9" class="cls-3" d="M134.253,111.081l-5.2,9.664-12.534-6.826,5.2-9.663Z"/>
+  <path id="Rectangle_2_copy_10" data-name="Rectangle 2 copy 10" class="cls-3" d="M141.3,82.806l0.075,11.344-14.118.728-0.075-11.344Z"/>
+  <path id="Rectangle_2_copy_11" data-name="Rectangle 2 copy 11" class="cls-3" d="M138.68,58.312l2.137,11.1-13.883,3.071L124.8,61.382Z"/>
+</svg>

@@ -1,0 +1,212 @@
+@import url('fonts-home.css');
+
+#page {
+    padding-bottom:20px;
+}
+
+#site-logo {
+    margin-left:5px !important;
+}
+
+#homewrapper {
+	width:100%;
+    min-height:100%;
+    padding-bottom:0;
+}
+
+#home {
+	margin: 0 auto 0 auto;
+	padding: 0 20px 0px 20px;
+	width:900px;
+	max-width:100%;
+	line-height:1.5;
+    font-size:19px;
+}
+
+#home h1 {
+	font-size:33pt;
+	margin-top:20px;
+}
+
+#home h2 {
+	font-size:22pt;
+	margin-bottom:18px;
+}
+
+.homebanner {
+    width:300%;
+    margin:-25px -100% 70px;
+    padding: 50px 0 50px 0;
+    overflow:hidden;
+    color:#eee;
+}
+
+.homebanner.blue {
+    background-color:#49B1F6;
+}
+
+.homebanner.cyan {
+    background-color:#67D3CF;
+}
+
+.homebanner.orange {
+    background-color:#D4945D;
+}
+
+.homebanner.red {
+    background-color:#D36767;
+}
+
+.homebanner.purple {
+    background-color:#7F67D3;
+}
+
+.homecontentblock {
+    width: 900px;
+    max-width:100%;
+    margin:0 auto 0 auto;
+    position:relative;
+    text-align:center;
+}
+
+.homecontentblock img {
+    margin:0 auto 30px auto;
+    max-width:100%;
+}
+
+.homecontentblock h1 {
+    font-family:'Quicksand', sans-serif;
+    font-size:60px;
+    font-weight:lighter;
+    letter-spacing:-1px;
+}
+
+.homecontentblock h1,.homecontentblock h2,.homecontentblock h3 {
+    color: #eee !important;
+}
+
+.homecontentblock button, .homebutton {
+    font-size:18px !important;
+    padding:16px 25px !important;
+    margin:12px !important;
+    border-radius:30px !important;
+    color:#fff !important;
+    min-width:150px;
+}
+
+.homefeature {
+    clear:both;
+    margin-bottom:100px;
+    display:table;
+}
+
+.homefeatureimage {
+    padding-left: 30px;
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.homefeaturelabel {
+    display:table-cell;
+    vertical-align:top;
+}
+
+.homefeaturelabel h2 {
+    margin-top:3px;
+}
+
+.vid {
+    width:700px;
+    height:394px;
+    position:relative;
+    margin: 50px auto 0 auto;
+}
+
+.registerbanner {
+	margin:60px auto 50px auto;
+	width:90%;
+	max-width:600px;
+	background-color:#DBE4ED;
+	border:thin solid;
+	border-radius:5px;
+	padding:40px 30px 15px 30px;
+	font-size:20px;
+	text-align:center;
+    color:#555;
+}
+
+#pricingcontainer {
+	margin:0 auto 0 auto;
+	width:100%;
+	max-width:400px;
+}
+
+.feedback-quote {
+    margin:10px auto 20px auto;
+    padding:45px 55px 45px 55px;
+    max-width:600px;
+    background-color:#eee;
+    font-size:20px;
+    quotes:'\201C' '\201D' '\2018' '\2019';
+    position: relative;
+    color:#000;
+}
+
+.feedback-quote:before {
+    content:open-quote;
+    font-size:50px;
+    position: absolute;
+    left: 25px;
+    top: 15px;
+}
+
+.feedback-quote:after {
+    content:close-quote;
+    font-size:50px;
+    position: absolute;
+    right: 20px;
+    bottom: -20px;
+}
+
+input[type=submit]:hover,input[type=button].actionbtn:hover,button.actionbtn:hover:not(:disabled) {
+    border:2px solid #656565 !important;
+    color:#fff;
+    cursor:pointer;
+}
+
+input[type=submit],input[type=button].actionbtn,button.actionbtn:not(:disabled) {
+    background-color:#4fa540 !important;
+    background-color:#4fa540b3 !important;
+    color:#fff;
+    border:2px solid #73ab7f !important;
+    border:2px solid #73ab7f80 !important;
+}
+
+
+button.server-login {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #10b1cc), color-stop(1, #246499) ) !important;
+    background:-moz-linear-gradient( center top, #10b1cc 5%, #246499 100% ) !important;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#10b1cc', endColorstr='#246499') !important;
+    background-color:#10b1cc !important;
+    color:#eee !important;
+    text-shadow: none !important;
+    border: thin solid #558ec2 !important;
+}
+
+button.server-login:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0fa5be), color-stop(1, #1f5684) ) !important;
+    background:-moz-linear-gradient( center top, #0fa5be 5%, #1f5684 100% ) !important;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0fa5be', endColorstr='#1f5684') !important;
+    background-color:#0fa5be !important;
+    color:#fff !important;
+    cursor:pointer;
+}
+
+select {
+    color:inherit;
+    background: #fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' height='4' width='20'><polygon points='4 0, 8 4, 12 0' fill='%23aaa' /></svg>") right center no-repeat;
+}
+
+th {
+    background-color:#3c3b3b;
+}

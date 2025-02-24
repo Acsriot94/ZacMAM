@@ -1,0 +1,7 @@
+nbproject
+.idea/*
+!.idea/runConfigurations
+*~
+composer.lock
+vendor
+.phpunit.result.cache

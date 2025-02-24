@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f0f0f0;
+        stroke: #353535;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        filter: url(#filter);
+      }
+
+      .cls-1, .cls-2, .cls-5 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        stroke: #565656;
+        stroke-width: 1px;
+        fill: url(#linear-gradient);
+        filter: url(#filter-2);
+      }
+
+      .cls-3 {
+        filter: url(#filter-3);
+      }
+
+      .cls-4, .cls-5 {
+        stroke: #ed2024;
+        stroke-width: 0;
+      }
+    </style>
+    <filter id="filter" x="18.5" y="5.563" width="93" height="118.531" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#6d24ac"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="86.406" y1="10.445" x2="109.656" y2="27.337" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dadada"/>
+      <stop offset="1" stop-color="#f0f0f0"/>
+    </linearGradient>
+    <filter id="filter-2" x="83" y="3" width="34" height="36" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="1.928" dy="2.298" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood" flood-opacity="0.3"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+      <feFlood result="flood-2" flood-color="#a266df"/>
+      <feComposite result="composite-2" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in2="blend"/>
+    </filter>
+    <filter id="filter-3" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#d3d3d3"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g style="fill: #f0f0f0; filter: url(#filter)">
+    <path id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-1" d="M85.535,6.164l-61.982-.59A5.354,5.354,0,0,0,18.515,11.2V118.468a5.354,5.354,0,0,0,5.038,5.622h82.92a5.354,5.354,0,0,0,5.039-5.622l-1.236-86.622C110.277,32.822,86.169,6.164,85.535,6.164Z" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#Rounded_Rectangle_1" style="stroke: #353535; filter: none; fill: none"/>
+  <g style="fill: url(#linear-gradient); filter: url(#filter-2)">
+    <path id="path" class="cls-2" d="M86.592,6.122L86.417,31.653l23.251-.176Z" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#path" style="stroke: #565656; filter: none; fill: none"/>
+  <g id="Zip" class="cls-3">
+    <rect class="cls-4" x="60.25" y="96.219" width="3.5" height="2.906"/>
+    <rect id="Rectangle_3_copy" data-name="Rectangle 3 copy" class="cls-4" x="64.125" y="99.344" width="3.5" height="2.937"/>
+    <rect id="Rectangle_3_copy_2" data-name="Rectangle 3 copy 2" class="cls-4" x="60.25" y="101.719" width="3.5" height="2.937"/>
+    <rect id="Rectangle_3_copy_3" data-name="Rectangle 3 copy 3" class="cls-4" x="64.125" y="104.875" width="3.5" height="2.906"/>
+    <rect id="Rectangle_3_copy_4" data-name="Rectangle 3 copy 4" class="cls-4" x="60.25" y="107.719" width="3.5" height="2.937"/>
+    <rect id="Rectangle_3_copy_5" data-name="Rectangle 3 copy 5" class="cls-4" x="64.125" y="110.875" width="3.5" height="2.906"/>
+    <rect id="Rectangle_3_copy_6" data-name="Rectangle 3 copy 6" class="cls-4" x="60.25" y="113.219" width="3.5" height="2.937"/>
+    <rect id="Rectangle_3_copy_7" data-name="Rectangle 3 copy 7" class="cls-4" x="64.125" y="116.375" width="3.5" height="2.937"/>
+    <rect id="Rectangle_3_copy_8" data-name="Rectangle 3 copy 8" class="cls-4" x="60.25" y="119.719" width="3.5" height="2.937"/>
+    <rect id="Rectangle_3_copy_16" data-name="Rectangle 3 copy 16" class="cls-4" x="60.25" y="49.75" width="3.5" height="2.906"/>
+    <rect id="Rectangle_3_copy_17" data-name="Rectangle 3 copy 17" class="cls-4" x="64.125" y="52.875" width="3.5" height="2.938"/>
+    <rect id="Rectangle_3_copy_18" data-name="Rectangle 3 copy 18" class="cls-4" x="60.25" y="55.25" width="3.5" height="2.938"/>
+    <rect id="Rectangle_3_copy_19" data-name="Rectangle 3 copy 19" class="cls-4" x="64.125" y="58.406" width="3.5" height="2.906"/>
+    <rect id="Rectangle_3_copy_20" data-name="Rectangle 3 copy 20" class="cls-4" x="60.25" y="61.25" width="3.5" height="2.938"/>
+    <rect id="Rectangle_3_copy_21" data-name="Rectangle 3 copy 21" class="cls-4" x="64.125" y="64.406" width="3.5" height="2.906"/>
+    <rect id="Rectangle_3_copy_22" data-name="Rectangle 3 copy 22" class="cls-4" x="60.25" y="66.75" width="3.5" height="2.938"/>
+    <rect id="Rectangle_3_copy_23" data-name="Rectangle 3 copy 23" class="cls-4" x="64.125" y="69.906" width="3.5" height="2.938"/>
+    <rect id="Rectangle_3_copy_24" data-name="Rectangle 3 copy 24" class="cls-4" x="60.25" y="73.25" width="3.5" height="2.938"/>
+    <rect id="Rectangle_3_copy_25" data-name="Rectangle 3 copy 25" class="cls-4" x="64.125" y="76.406" width="3.5" height="2.938"/>
+    <rect id="Rectangle_3_copy_26" data-name="Rectangle 3 copy 26" class="cls-4" x="60.25" y="78.781" width="3.5" height="2.906"/>
+    <rect id="Rectangle_3_copy_27" data-name="Rectangle 3 copy 27" class="cls-4" x="64.125" y="81.906" width="3.5" height="2.938"/>
+    <rect id="Rectangle_3_copy_28" data-name="Rectangle 3 copy 28" class="cls-4" x="60.25" y="84.781" width="3.5" height="2.906"/>
+    <rect id="Rectangle_3_copy_29" data-name="Rectangle 3 copy 29" class="cls-4" x="64.125" y="87.906" width="3.5" height="2.938"/>
+    <rect id="Rectangle_3_copy_30" data-name="Rectangle 3 copy 30" class="cls-4" x="60.25" y="90.281" width="3.5" height="2.938"/>
+    <rect id="Rectangle_3_copy_31" data-name="Rectangle 3 copy 31" class="cls-4" x="64.125" y="93.438" width="3.5" height="2.906"/>
+    <path id="Zip-2" data-name="Zip" class="cls-5" d="M63.664,29.994c5.126,0,3.988,4.443,3.988,9.924s8.564,12.015-3.988,12.015c-11.545,0-3.988-6.534-3.988-12.015S58.548,29.994,63.664,29.994Zm0.273,15.069c1.881,0,3.406,1.035,3.406,2.313s-1.525,2.313-3.406,2.313-3.406-1.035-3.406-2.312S62.056,45.063,63.938,45.063Z"/>
+  </g>
+</svg>

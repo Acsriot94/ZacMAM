@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="76" viewBox="0 0 150 76">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="Border" class="cls-1" x="3" y="2" width="143" height="71" rx="21.5" ry="21.5"/>
+  <rect id="Player" class="cls-1" x="30" y="20" width="45" height="34" rx="5" ry="5"/>
+  <path id="Play_Icon" data-name="Play Icon" class="cls-2" d="M61,37.5L47,29.005V45.987Z"/>
+  <rect id="Line_3" data-name="Line 3" class="cls-3" x="88" y="23" width="31" height="3"/>
+  <rect id="Line_2" data-name="Line 2" class="cls-3" x="88" y="35" width="31" height="3"/>
+  <rect id="Line_1" data-name="Line 1" class="cls-3" x="88" y="48" width="31" height="3"/>
+</svg>

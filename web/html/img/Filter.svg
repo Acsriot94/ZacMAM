@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b1b1b1;
+        stroke: #636363;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Funnel" class="cls-1" d="M72.625,88.079v23.612H53.375V88.079m-0.012,0L8.969,25.485h111.04L72.633,88.079"/>
+  <path id="Top" class="cls-1" d="M7.563,24.382H120.25V40.8H7.563V24.382Z"/>
+</svg>

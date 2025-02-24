@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        stroke: #484848;
+        stroke-width: 0;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        opacity: 0.9;
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+        filter: url(#filter);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="65.625" y1="37.719" x2="65.625" y2="15.594" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1f4b81"/>
+      <stop offset="1" stop-color="#5c9ee8"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="65.625" y1="106.688" x2="65.625" y2="31.562" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2275db"/>
+      <stop offset="1" stop-color="#5c9ee8"/>
+    </linearGradient>
+    <filter id="filter" x="6" y="31.563" width="123" height="81.438" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="1.5" dy="2.598" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="1.732"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-1" d="M8.888,37.621v0.108a10.892,10.892,0,0,1,10.78-11L25.146,15.59H48.364s5.242,11.139,7.95,11.139h55.29a10.891,10.891,0,0,1,10.78,11V37.621"/>
+  <g style="fill: url(#linear-gradient-2); filter: url(#filter)">
+    <path id="Rounded_Rectangle_2" data-name="Rounded Rectangle 2" class="cls-2" d="M16.473,31.563H114.75c5.853,0,8.767,4.477,8.767,10V97.188c0,5.522-5.276,9.5-11.07,9.5H18.776c-5.794,0-11.071-3.977-11.071-9.5V41.563C7.7,36.04,10.62,31.563,16.473,31.563Z" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#Rounded_Rectangle_2" style="stroke: #484848; filter: none; fill: none"/>
+</svg>

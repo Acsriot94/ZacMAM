@@ -1,0 +1,21 @@
+<svg id="Marker" xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #33803b;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #3ca64f;
+        opacity: 0.8;
+      }
+    </style>
+  </defs>
+  <path id="Arrow" class="cls-1" d="M20.941,5.329v8.045h-2.4l4.638,7.3,4.638-7.3h-2.4V5.329H20.941Z"/>
+  <path id="Marker-2" data-name="Marker" class="cls-1" d="M0.387,2.8H16.879l-0.53,12.15L9.272,20.5l-1.845.014L0.5,14.952Z"/>
+  <path id="Reflection" class="cls-2" d="M4.1,17.447L16.764,6.279l0.115,7.728L8.425,22.182Z"/>
+</svg>

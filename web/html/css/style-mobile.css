@@ -1,0 +1,236 @@
+html,body {
+font-size:15px;
+    min-width:0;
+}
+
+h1 {
+	font-size:22pt;
+}
+
+h2 {
+	font-size:18px;
+}
+
+h3 {
+	font-size:15px;
+}
+
+#navbar-collapse {
+	opacity:1;
+}
+
+#navbar-uncollapse {
+	opacity:1;
+}
+
+#navbar:not(.vertical) #nav_left a {
+	padding: 5px 8px;
+}
+
+#header {
+	margin:0;
+	padding:5px;
+	height:30px;
+}
+
+#header button {
+    position: relative;
+    padding:5px 10px;
+}
+
+#user_dropdown_box {
+    height:20px;
+    padding:2px;
+}
+
+#user_dropdown_box .avatar {
+    height:22px;
+    width:22px;
+}
+
+#navbar {
+    line-height:20px;
+	padding:5px;
+}
+
+#page {
+	padding:2px;
+  }
+
+#content {
+	margin:5px 5px 50px 5px;
+}
+
+#project_dropdown_container {
+	display:none;
+}
+
+.projecttable tr:hover .project-mute {
+	display:none;
+}
+
+#nav_left>a {
+	padding:5px 12px 9px 12px;
+	position:relative;
+	font-size:15px;
+}
+
+#nav_left img {
+	width:24px;
+	height:24px;
+	margin:0;
+}
+
+.header-icon {
+	width: 38px;
+	height: 38px;
+}
+
+input[type=text],input[type=password] {
+	max-width:100%;
+}
+
+input[type=search] {
+	margin:1px;
+	font-size:12px;
+	max-width:40%;
+}
+
+#feedback-slide-out {
+	display:none;
+}
+
+button.export {
+    float:right;
+    margin-right:2px;
+}
+
+.nomobile {
+	display:none !important;
+}
+
+button.login {
+    padding:5px 25px !important;
+    margin-top:-1px;
+}
+
+/* Tables */
+
+.filetable {
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.filetable td {
+	padding:0;
+}
+
+#filetablecontainer {
+	overflow:scroll;
+}
+
+#tasktablecontainer {
+    overflow:scroll;
+}
+
+#sharetablecontainer {
+    overflow:scroll;
+}
+
+.projecttable {
+	width:100%;
+}
+
+.project-thumb {
+	-webkit-filter:saturate(100%);
+	filter:saturate(100%);
+}
+
+/* Files */
+
+.filetable {
+	margin:0;
+}
+
+.file-controls {
+	float:none;
+	padding:5px 3px;
+}
+
+.file-title {
+	font-size:15px;
+	padding-bottom:6px;
+	max-width:100%;
+}
+
+.revision-title {
+    font-size:9px;
+}
+
+.prev-page-nav {
+	margin-bottom:50px;
+}
+
+.next-page-nav {
+	margin-bottom:50px;
+}
+
+/* Player */
+#player_container {
+	width:100%;
+}
+
+#player_container .spinner {
+	display:none;
+}
+
+#video_player {
+	width:100%;
+}
+
+#player_wrapper {
+	width:100% !important;
+}
+
+#info-table {
+	clear:both;
+}
+
+#player-actions-sizer {
+	min-width:100px;
+}
+
+/* Comments */
+
+#comment-container {
+	float:none;
+	width:90%;
+	max-height:800px;
+	overflow:scroll;
+}
+
+.reply-label, .comment-dropdown {
+	opacity:1 !important;
+}
+
+#player-rightbar {
+	min-height:initial;
+}
+
+/* Help */
+
+#help {
+	margin:0 !important;
+	padding:0 !important;
+	width:100% !important;
+}
+
+.helptable {
+	width:100% !important;
+}
+
+/* Dashboard */
+
+.dashboard-box {
+	height:initial;
+}

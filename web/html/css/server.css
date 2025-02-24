@@ -1,0 +1,53 @@
+#page {
+    padding-bottom:100px;
+}
+
+.server-doc-container {
+    display:table;
+    margin:10px auto;
+}
+
+.server-doc {
+    text-align:center;
+    width:200px;
+    display:table-cell
+}
+
+.server-doc img {
+/*    filter: invert(100%);*/
+    max-width:100px;
+}
+
+.buy-table {
+    margin:15px auto;
+    border:1px solid #333;
+}
+
+.buy-table th {
+    text-align:center;
+    width:33%;
+}
+
+.buy-table td {
+    text-align: center;
+    padding:10px;
+    border-right:1px solid #333;
+}
+
+.download-header {
+    align-items: center;
+    display: flex;
+}
+
+.download-header h3 {
+    margin:0;
+}
+
+.download-header img {
+    margin-right: 2px;
+    width: 48px;
+}
+
+.download-description {
+    padding-left:50px;
+}

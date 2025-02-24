@@ -1,0 +1,76 @@
+#tbl-admin td {
+	padding:5px;
+}
+
+.admin-tool .fa-icon {
+	width: 22px;
+	height: 22px;
+	margin-right: 12px;
+	background-color: var(--heading-color);
+}
+
+.deptrow {
+    font-size:16px;
+    font-weight:bold;
+    background-color: #ccc !important;
+    color: #333 !important;
+}
+
+.deptposition {
+    padding-left:10px;
+}
+
+.server-status {
+	width:12px;
+	height:12px;
+	display: inline-block;
+	background-image:url("../img/task-grey.svg");
+}
+
+.server-status.pending {
+	background-image:url("../img/task-orange.svg");
+}
+
+.server-status.offline {
+	background-image:url("../img/task-red.svg");
+}
+
+.server-status.online {
+	background-image:url("../img/task-green.svg");
+}
+
+.dashboardtable td {
+	vertical-align:top;
+}
+
+.simpleColorChooser {
+	z-index:99999;
+	background-color:#555;
+}
+
+.install-success {
+	background:url('../img/Success.svg');
+	width:48px;
+	height:48px;
+}
+
+.install-failed {
+	background:url('../img/failed.svg');
+	width:48px;
+	height:48px;
+}
+
+.step-complete-wrapper {
+	display: flex;
+	align-items: center;
+	font-size: 14pt;
+}
+
+.step-complete-icon {
+	background: url('../img/Success.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 32px;
+	margin-right: 5px;
+}

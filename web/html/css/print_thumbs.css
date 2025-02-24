@@ -1,0 +1,77 @@
+@import url('fonts.css');
+
+html,body {
+    margin:0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:18px;
+    width:100%;
+    height:100%;
+    min-width:1024px;
+    line-height:1.35;
+    letter-spacing:0.5px;
+}
+
+.thumb-placeholder {
+    width:120px;
+    height:68px;
+}
+
+#progress {
+    width:300px;
+    height:100px;
+    position:fixed;
+    left:calc(50% - 150px);
+    top:calc(50% - 50px);
+    background-color:#616161;
+    opacity:1;
+    padding:30px;
+    border-radius:30px;
+    color:#ccc;
+}
+
+#progress_bar {
+    display:block;
+    width:100%;
+}
+
+#progress button {
+    width:68px;
+    background-color:transparent;
+    border:2px solid #ddd;
+    border-radius:17px;
+    padding:8px 0;
+    color:#eee;
+    margin:10px auto;
+    display:block;
+}
+
+.print-page {
+    width:800px;
+    max-width:100%;
+    margin:30px auto;
+}
+
+table {
+    width:100%;
+}
+
+td,th {
+    padding:10px;
+}
+
+th {
+    text-align: left;
+}
+
+tr {
+    page-break-inside:avoid;
+}
+
+h1,h2,h3 {
+    color:#333;
+    font-family:'Oxygen', sans-serif;
+    letter-spacing: 1.2px;
+    font-weight: initial;
+    text-align:center;
+    margin-bottom:50px;
+}

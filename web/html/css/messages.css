@@ -1,0 +1,11 @@
+#messageTable {
+    width:100%;
+}
+
+#messageTable td {
+    padding:5px;
+}
+
+#messageTable .unread {
+    font-weight: bold;
+}

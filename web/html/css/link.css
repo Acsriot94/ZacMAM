@@ -1,0 +1,16 @@
+#header {
+    margin-top:10px;
+    height:40px;
+}
+
+#header img {
+    max-height:50px;
+}
+
+h1 {
+    font-size:38px;
+}
+
+#player-actions-sizer {
+    justify-content:center;
+}

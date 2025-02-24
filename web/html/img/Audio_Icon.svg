@@ -1,0 +1,48 @@
+<svg id="Speaker" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f0f0f0;
+        stroke: #464646;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 1px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        stroke: #565656;
+        fill: url(#linear-gradient);
+        filter: url(#filter);
+      }
+
+      .cls-3 {
+        fill: #565656;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="86.406" y1="10.445" x2="109.656" y2="27.337" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dadada"/>
+      <stop offset="1" stop-color="#f0f0f0"/>
+    </linearGradient>
+    <filter id="filter" x="79" y="3" width="34" height="36" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="-2.121" dy="2.121" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood" flood-opacity="0.3"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-1" d="M85.535,6.164l-61.982-.59A5.354,5.354,0,0,0,18.515,11.2V118.468a5.354,5.354,0,0,0,5.038,5.622h82.92a5.354,5.354,0,0,0,5.039-5.622l-1.236-86.622C110.277,32.822,86.169,6.164,85.535,6.164Z"/>
+  <g style="fill: url(#linear-gradient); filter: url(#filter)">
+    <path id="path" class="cls-2" d="M86.592,6.122L86.417,31.653l23.251-.176Z" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#path" style="stroke: #565656; filter: none; fill: none"/>
+  <path class="cls-3" d="M43.866,66.265l6.648-1.431L60.926,56.2l2.757-.724V88.159l-2.748-.641-10.42-8.37-6.648-1.432V66.265Z"/>
+  <path class="cls-3" d="M65.783,64.968H67.7s3.659,3.958,3.659,7.94C71.361,76.942,67.7,81,67.7,81H65.783s3.659-4.059,3.659-8.093C69.441,68.925,65.783,64.968,65.783,64.968Z"/>
+  <path id="Rectangle_2_copy" data-name="Rectangle 2 copy" class="cls-3" d="M68.052,56.745h2.06s7.95,7.825,7.95,15.7c0,7.975-7.95,16-7.95,16h-2.06s7.95-8.026,7.95-16C76,64.57,68.052,56.745,68.052,56.745Z"/>
+  <path id="Rectangle_2_copy_2" data-name="Rectangle 2 copy 2" class="cls-3" d="M72.719,48.767h2.2S85.38,60.493,85.38,72.294c0,11.952-10.461,23.98-10.461,23.98h-2.2S83.18,84.246,83.18,72.294C83.18,60.493,72.719,48.767,72.719,48.767Z"/>
+</svg>

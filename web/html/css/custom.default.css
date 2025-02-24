@@ -1,0 +1,50 @@
+/* Variables */
+:root {
+    --page-bg-color: [#PAGE_BG#];
+    --page-text-color: [#PAGE_FG#];
+    --page-text-secondary-color: [#PAGE_FG2#];
+    --link-color: [#LINK_FG#];
+    --heading-color: [#PAGE_FG#];
+
+    --table-header-bg-color: [#TABLE_HEADER_BG#];
+
+    --navbar-navlink-text-color: [#NAV_FG#];
+    --navbar-bg-color1: [#NAV_BG#];
+    --navbar-bg-color2: [#NAV_BG#];
+    --navbar-navlink-bg-color-selected: [#NAV_SELECTED_BG#];
+
+    --footer-text-color: [#FOOT_FG#];
+    --footer-bg-color1: [#FOOT_BG#];
+    --footer-bg-color2: [#FOOT_BG#];
+
+    --page-secondary-color: [#PAGE_BG2#];
+    --file-bg-color-alt: [#PAGE_BG2#];
+
+    --comment-bg-color: [#PAGE_BG#];
+    --comment-bg-color-hover: [#PAGE_BG2#];
+    --comment-text-color: [#PAGE_FG#];
+    --comment-text-color-hover: [#PAGE_FG#];
+    --comment-bg-color-new: [#PAGE_BG2#];
+    --comment-link-bg-color: [#PAGE_BG2#];
+
+    --path-selector-text-color: [#LINK_FG#];
+
+    --input-bg-color: [#PAGE_BG#];
+    --input-text-color: [#PAGE_FG#];
+    --input-border-color-hover: [#PAGE_FG#];
+
+    --button-text-color: [#BTN_1_FG#];
+    --button-bg-color: [#BTN_1_BG#];
+    --button-border-color: [#BTN_1_BORDER#];
+
+    --button-action-text-color: [#BTN_2_FG#];
+    --button-action-bg-color: [#BTN_2_BG#];
+    --button-action-border-color: [#BTN_2_BORDER#];
+
+    --centered-content-bg-color: [#CONTENT_BOX_BG#];
+
+    --player-action-button-container-bg-color: [#BTN_PLAYER_ACTION#];
+
+    --file-title-text-color: [#PAGE_FG#];
+    --file-status-text-color: [#PAGE_FG#];
+}

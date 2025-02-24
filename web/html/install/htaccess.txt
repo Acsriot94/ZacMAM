@@ -1,0 +1,46 @@
+php_flag magic_quotes_gpc "Off"
+Header unset X-Mod-Pagespeed
+ServerSignature Off
+
+RewriteEngine On
+ErrorDocument 400 /error.php
+ErrorDocument 401 /error.php
+ErrorDocument 403 /error.php
+ErrorDocument 404 /error.php
+ErrorDocument 500 /error.php
+
+# Is not directory
+RewriteCond %{REQUEST_FILENAME} !-d
+# Is an existing php file
+RewriteCond %{REQUEST_FILENAME}\.php -f
+# rewrite index to index.php
+RewriteRule ^(.*)$ $1.php
+
+# For compatibility with CGI
+RewriteRule .* - [env=HTTP_AUTHORIZATION:%{HTTP:Authorization},last]
+
+AddType audio/mpeg mp3
+AddType audio/mp4 m4a
+AddType audio/ogg ogg
+AddType audio/ogg oga
+AddType audio/webm webma
+AddType audio/wav wav
+
+AddType video/mp4 mp4
+AddType video/mp4 m4v
+AddType video/ogg ogv
+AddType video/webm webm
+AddType video/webm webmv
+
+AddType image/svg+xml svg svgz
+AddType font/woff2 woff2
+
+AddType application/x-httpd-php php
+AddHandler application/x-httpd-php .php
+
+Options -Indexes -MultiViews +FollowSymLinks
+
+php_value upload_max_filesize 60000M
+php_value post_max_size 60000M
+php_value max_input_time 300
+LimitRequestBody 64424509440

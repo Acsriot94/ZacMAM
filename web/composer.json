@@ -1,0 +1,39 @@
+{
+  "name": "digital_rebellion/kollaborate",
+  "description": "description_text",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "author's name",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "ext-json": "*",
+    "ext-mysqli": "*",
+    "ext-curl": "*",
+    "ext-zip": "*",
+    "ext-intl": "*",
+    "ext-sodium": "*",
+    "onelogin/php-saml": "3.4.1.x",
+    "myclabs/php-enum": "1.8.x",
+    "twig/twig": "3.7.x",
+    "twig/string-extra": "3.7.x",
+    "phpfastcache/phpfastcache": "9.1.x",
+    "aws/aws-sdk-php": "3.285.4",
+    "aws/aws-php-sns-message-validator": "1.6.x",
+    "maennchen/zipstream-php": "2.1.x",
+    "phpmailer/phpmailer": "^6.5",
+    "spomky-labs/otphp": "11.2.x"
+  },
+  "require-dev": {
+    "php-webdriver/webdriver": "1.15.*",
+    "symfony/panther": "2.0.1.*",
+    "phpunit/phpunit": "9.6.x",
+    "guzzlehttp/guzzle": "7.8.*",
+    "byjg/swagger-test": "3.1.*",
+    "phan/phan": "5.*"
+  }
+}

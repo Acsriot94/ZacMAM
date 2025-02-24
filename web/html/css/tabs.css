@@ -1,0 +1,38 @@
+ul.tabNavigation {
+	margin: 0;
+	padding: 0;
+	height: 39px;
+	width: 100%;
+	float: left;
+	list-style-type: none;
+}
+ul.tabNavigation li {
+	height: 39px;
+	line-height: 39px;
+	float: left;
+	overflow: hidden;
+}
+ul.tabNavigation li a {
+	margin-right: 1px;
+	padding: 0;
+	width: 148px;
+	height: 39px;
+	background-image: url('../img/tab.gif');
+	color: #000000;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+}
+ul.tabNavigation li a.selected, ul.tabNavigation li a:hover {
+	background-image: url('../img/tab_active.gif');
+}
+ul.tabNavigation li a:focus {
+	outline: 0;
+}
+div.tabs > div {
+	margin-left: 0px;
+	width: 900px;
+}

@@ -1,0 +1,76 @@
+/* Variables */
+:root {
+    --page-bg-color: #1a1f26;
+    --page-secondary-color: #1e252f;
+    --page-text-color: #bbb;
+    --page-text-secondary-color: #aaa;
+    --link-color: #889CC8;
+
+    --heading-color: #e3e3e3;
+    --heading-link-color: #96b4fa;
+
+    --navbar-bg-color1: #0f0f0f;
+    --navbar-bg-color2: #0f0f0f;
+    --navbar-navlink-text-color: #ddd;
+
+    --input-bg-color: #212229;
+    --input-text-color: #ddd;
+    --input-border-color: #7e8496;
+
+    --menu-bg-color: #1e1e1e;
+    --menu-bg-color-alt: #222;
+    --menu-text-color: #bbb;
+
+    --select-border-color: #8f929c;
+    --select-text-color: #ccc;
+    --dd-select-border-color: #8f929c;
+    --dd-select-text-color: #ddd;
+
+    --file-bg-color-alt: #1e252f;
+    --file-title-text-color: #ccc;
+
+    --comment-tab-bg-color: #3E404E;
+    --comment-bg-color: #2d2d2d70;
+    --comment-text-color: #a5a5a5;
+    --comment-border-color: #4d4d50;
+    --comment-bg-color-hover: #585B6B;
+    --comment-text-color-hover: #eee;
+    --comment-bg-color-new: #323131;
+    --comment-border-color-new: #555;
+    --comment-link-bg-color: #2d2d2d70;
+    --comment-link-border-color: #555;
+    --comment-body-text-color: #aaa;
+    --comment-content-text-color: #ccc;
+
+    --player-download-box-bg-color1: #888;
+    --player-download-box-bg-color2: #bbb;
+    --player-download-box-bg-color1-hover: #aaa;
+    --player-download-box-bg-color2-hover: #ccc;
+    --player-download-box-bg-color1-active: #777;
+    --player-download-box-bg-color2-active: #999;
+
+    --event-dropdown-alt-bg-color: #353745;
+    --event-dropdown-content-text-color: #ddd;
+    --event-dropdown-date-text-color: #aaa;
+
+    --tab-header-text-color: #bbb;
+    --tab-header-text-color-active: #fff;
+
+    --button-login-text-color: #ccc;
+    --button-login-border-color: #aaa;
+    --button-login-text-color-hover: #eee;
+    --button-login-border-color-hover: #ccc;
+
+    --button-bg-color: var(--input-bg-color);
+    --button-border-color: #717171;
+    --user-avatar-text-color-hover: #fff;
+}
+
+#header {
+background:none;
+background-color: var(--page-bg-color);
+}
+
+.share-stat-header .ui-accordion-header {
+    background-color:transparent !important;
+}

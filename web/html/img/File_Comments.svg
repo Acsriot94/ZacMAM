@@ -1,0 +1,25 @@
+<svg id="Icon" xmlns="http://www.w3.org/2000/svg" width="62" height="53" viewBox="0 0 62 53">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #7d7d7d;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #7d7d7d;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="5" y="4" width="51" height="44"/>
+  <rect id="Text" class="cls-1" x="24" y="14" width="27" height="1"/>
+  <rect id="Text_copy_2" data-name="Text copy 2" class="cls-1" x="24" y="26" width="27" height="1"/>
+  <rect id="Text_copy_4" data-name="Text copy 4" class="cls-1" x="24" y="38" width="27" height="1"/>
+  <rect id="Img" class="cls-2" x="11" y="11" width="9" height="7"/>
+  <rect id="Img_copy" data-name="Img copy" class="cls-2" x="11" y="23" width="9" height="7"/>
+  <rect id="Img_copy_2" data-name="Img copy 2" class="cls-2" x="11" y="35" width="9" height="7"/>
+</svg>

@@ -1,0 +1,71 @@
+body {
+	margin:0;
+	padding:0;
+}
+
+#wrapper {
+	width:100%;
+	padding:0;
+}
+
+#homebanner { 
+	width: 100%;
+	margin-bottom:30px;
+	display:none;
+}
+
+#home {
+	width:100%;
+	padding:0;
+	margin: 0 auto 0 auto;
+}
+
+.vid {
+    width:100%;
+    max-height:250px;
+    margin: 20px auto 0 auto;
+}
+
+.homefeatureimage {
+	float:none;
+	top:0;
+	padding-left:0;
+}
+
+.homefeatureimage img {
+    width:100%;
+}
+
+#home h1 {
+	font-size:20pt;
+	margin-top:5px;
+}
+
+#home h2 {
+	font-size:17pt;
+	margin-bottom:8px;
+}
+
+.homefeature {
+	margin-bottom:50px;
+}
+
+.registerbanner {
+	margin: 60px auto 50px auto;
+	padding: 3px;
+	width:95%;
+}
+
+#pricingcontainer {
+	width:85%;
+}
+
+.homebanner {
+    width:100%;
+    margin:-25px -10px 70px;
+    padding: 50px 10px 50px 10px;
+}
+
+.homecontentblock h1 {
+    font-size:30px;
+}

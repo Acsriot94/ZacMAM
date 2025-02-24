@@ -1,0 +1,55 @@
+.nomobile {
+	display:none !important;
+}
+
+.nopanel {
+	display:none !important;
+}
+
+html,body,#wrapper,#pagewrapper,#page {
+	background-color:transparent !important;
+}
+
+.file-obj {
+	background-color:transparent !important;
+}
+
+#page {
+	padding: 0 20px 20px 20px !important;
+}
+
+#content {
+	margin:0 !important;
+}
+
+#filetablecontainer {
+	margin-top:0 !important;
+}
+
+h1 {
+	margin-bottom:5px !important;
+}
+
+.panel-todo-item.clickable:hover {
+	background-color:#8391AA !important;
+	cursor:pointer;
+	color:#eee;
+}
+
+.comment-todo-btn {
+	top: 0 !important;
+	width:22px;
+	height:22px;
+	background-repeat:no-repeat;
+	background-size:100%;
+}
+
+.centered-content {
+	background-color:transparent !important;
+	border:none !important;
+	padding:0;
+	top:0 !important;
+	position:relative !important;
+	transform:none !important;
+	left:0 !important;
+}
