@@ -1,0 +1,93 @@
+version: '3.3'
+services:
+  webserver:
+    build: ./webserver
+    env_file: ./config.env
+    platform: linux/amd64
+    volumes:
+      - type: bind
+        target: /kollabserver/storage
+        # Edit the following line to specify the path to your
+        # shared storage drive as your host system sees it
+        # (i.e. if your host OS is macOS, it should be a Mac-type
+        # path starting with /Volumes/)
+        source: ~/Documents/KollaborateServer/Storage
+      - ./web:/var/www:delegated
+    depends_on:
+      - database
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: "10m"
+    restart: always
+
+  proxy:
+    build: ./proxy
+    env_file: ./config.env
+    platform: linux/amd64
+    ports:
+      - '80:80'
+      - '443:443'
+    depends_on:
+      - letsencrypt
+      - webserver
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - letsencrypt:/etc/letsencrypt
+      - ./certificates:/third-party-certs
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: "10m"
+    restart: always
+
+  letsencrypt:
+    build: ./letsencrypt
+    env_file: ./config.env
+    platform: linux/amd64
+    volumes:
+      - letsencrypt:/etc/letsencrypt
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: "10m"
+
+  database:
+    build: ./database
+    command: --sql_mode=""
+    env_file: ./config.env
+    platform: linux/amd64
+    # Uncomment the following two lines to allow you to access the database
+    # in an external database tool like phpMyAdmin or Sequel Pro
+    #ports:
+      #- '3306:3306'
+    volumes:
+      - kollab-db-data:/var/lib/mysql
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: "10m"
+    restart: always
+
+  websocket:
+    build: ./websocketserver
+    env_file: ./config.env
+    platform: linux/amd64
+    volumes:
+      - .:/var/www:ro
+    depends_on:
+      - webserver
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: "10m"
+    restart: always
+
+volumes:
+  kollab-db-data:
+  letsencrypt:
