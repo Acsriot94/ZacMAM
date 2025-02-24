@@ -1,0 +1,24 @@
+<div id="navwrapper">
+    <div id="nav_left">
+        <div id="nav-links">
+            <div class="nav-link{% if nav_name == 'home' %} selected{% endif %}">
+                <a href="{{ relative_root }}/">Home</a>
+            </div>
+            <div class="nav-link{% if nav_name == 'features' %} selected{% endif %}">
+                <a href="{{ relative_root }}features">Features</a>
+            </div>
+            <div class="nav-link{% if nav_name == 'faq' %} selected{% endif %}">
+                <a href="{{ relative_root }}faq">FAQ</a>
+            </div>
+            <div class="nav-link{% if nav_name == 'pricing' %} selected{% endif %}">
+                <a href="{{ relative_root }}pricing">Pricing</a>
+            </div>
+            <div class="nav-link{% if nav_name == 'apps' %} selected{% endif %}">
+                <a href="{{ relative_root }}resources">Apps</a>
+            </div>
+            <div class="nav-link{% if nav_name == 'server' %} selected{% endif %}">
+                <a href="{{ relative_root }}server/">Self-Hosting</a>
+            </div>
+        </div>
+    </div>
+</div>

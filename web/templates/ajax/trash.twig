@@ -1,0 +1,7 @@
+<tr data-file-id="{{ id }}">
+    <td><div class="trash-file-title">{{ title }}</div></td>
+    <td>{{ size }}</td>
+    <td>{{ deleted_on }}</td>
+    <td><img src="{{ deleted_by_avatar }}" class="avatar"> {{ deleted_by_name }}</td>
+    <td><div class="trash-original-path">{{ path }}</div></td>
+    <td><div class="trash-button-container"><a href="trash?restore-file={{ id }}"><button class="actionbtn trash-restore">Restore</button></a> <a href="trash?delete-file={{ id }}"><button class="trash-delete">Delete</button></a></div></td></tr>

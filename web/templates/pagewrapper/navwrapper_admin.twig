@@ -1,0 +1,38 @@
+<div id="navwrapper">
+    <div id="nav_left">
+        <div id="nav-links">
+            <div class="nav-link{% if nav_name == 'dashboard' %} selected{% endif %}">
+                <a href="{{ relative_root }}admin/dashboard">Dashboard</a>
+            </div>
+            {% if super_admin %}
+                <div class="nav-link{% if nav_name == 'admins' %} selected{% endif %}">
+                    <a href="{{ relative_root }}admin/admins">Admins</a>
+                </div>
+            {% endif %}
+            <div class="nav-link{% if nav_name == 'users' %} selected{% endif %}">
+                <a href="{{ relative_root }}admin/users">Users</a>
+            </div>
+            <div class="nav-link{% if nav_name == 'roles' %} selected{% endif %}">
+                <a href="{{ relative_root }}admin/roles">Roles</a>
+            </div>
+            <div class="nav-link{% if nav_name == 'workflows' %} selected{% endif %}">
+                <a href="{{ relative_root }}admin/workflows">Workflows</a>
+            </div>
+
+            {% if super_admin %}
+                <div class="nav-link{% if nav_name == 'servers' %} selected{% endif %}">
+                    <a href="{{ relative_root }}admin/servers">Servers</a>
+                </div>
+                <div class="nav-link{% if nav_name == 'encoding_profiles' %} selected{% endif %}">
+                    <a href="{{ relative_root }}admin/encoding_profiles">Encoding Profiles</a>
+                </div>
+                <div class="nav-link{% if nav_name == 'config' %} selected{% endif %}">
+                    <a href="{{ relative_root }}admin/config">Configure</a>
+                </div>
+                <div class="nav-link{% if nav_name == 'tools' %} selected{% endif %}">
+                    <a href="{{ relative_root }}admin/tools">Tools</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

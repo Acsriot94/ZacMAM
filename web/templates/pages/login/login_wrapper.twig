@@ -1,0 +1,10 @@
+<div class="login-wrapper">
+    <div class="login-form centered-content{% if is_panel %} panel{% endif %}">
+        {% if error_text != "" %}<div class="error-alert">{{ error_text|raw }}</div>{% endif %}
+        {% if info_text != "" %}<div class="info-alert">{{ info_text|raw }}</div>{% endif %}
+        <div class="site-logo" style="background-image: url('{{ site_logo_url }}')"></div>
+        <form id="loginform" method="post" action="login{% if destination != "" %}?dest={{ destination }}{% endif %}">
+            {{ content|raw }}
+        </form>
+    </div>
+</div>

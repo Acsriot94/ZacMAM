@@ -1,0 +1,138 @@
+{% if data.info is defined %}
+<div id="info-tab-1" class="info-tab">
+    <table cellpadding="3" width="100%">
+        {% if data.info.description|length > 10 %}
+            <tr><td valign="top">Description<td>{{ data.info.description|raw }}
+        {% endif %}
+        {% if data.info.date is defined %}
+            <tr><td>Date<td>{{ data.info.date }}
+        {% endif %}
+        {% if data.info.uploaded_by is defined %}
+            <tr><td>Uploaded by<td><a href="profile?view={{ data.info.uploaded_by.id }}"><img class="avatar" src="{{ data.info.uploaded_by.avatar }}" />{{ data.info.uploaded_by.name }}</a>
+        {% endif %}
+        {% if data.info.views is defined %}
+            <tr><td>Views<td>{{ data.info.views }}
+                {% if data.info.top_viewers is defined and data.info.top_viewers|length > 0 %}
+                    <a href="#users-tab" onclick="showUsersTab()"><span class="inline-viewers">
+
+                    {% for user in data.info.top_viewers %}
+                        {% if loop.index0 < 5 %}
+                            <img class="avatar small tooltip" title="{{ user.name }}" src="{{ user.avatar }}"/>
+                        {% else %}
+                            ...
+                        {% endif %}
+                    {% endfor %}
+                </span></a>
+                {% endif %}
+        {% endif %}
+        {% if data.info.downloads is defined %}
+            <tr><td>Downloads<td>{{ data.info.downloads }}
+            {% if data.info.top_downloaders is defined and data.info.top_downloaders|length > 0 %}
+                <a href="#users-tab" onclick="showUsersTab()"><span class="inline-viewers">
+
+                {% for user in data.info.top_downloaders %}
+                    {% if loop.index0 < 5 %}
+                        <img class="avatar small tooltip" title="{{ user.name }}" src="{{ user.avatar }}"/>
+                    {% else %}
+                        ...
+                    {% endif %}
+                {% endfor %}
+                </span></a>
+            {% endif %}
+        {% endif %}
+    {% if data.info.expiration is defined %}
+        <tr><td><span style="color:#e24444">Expiration:</span><td><span style="color:#e24444">{{ data.info.expiration }}</span>
+    {% endif %}
+    {% if data.info.tags is defined %}
+        <tr><td>Tags<td><div class="tag-view">
+            {% for tag in data.info.tags %}
+                    <a href="{{ tag.url }}"><div class="tag">{{ tag.name }}</div></a>
+            {% endfor %}
+                </div>
+                <a href="#" onclick="showEditFileTagsDialog([{{ file_id }}], 'finishEditingTagsForFileID({{ file_id }})')">Edit Tags...</a>
+    {% endif %}
+    </table>
+</div>
+{% endif %}
+
+{% if data.metadata is defined %}
+    <div id="info-tab-2" class="info-tab">
+        {% if data.metadata.metadata is defined and data.metadata.metadata|length > 0 %}
+            <table width="90%" class="pagesectable"><tr><th>Key<th>Value
+                {% for key, val in data.metadata.metadata %}
+                    <tr><td>{{ key }}<td>{{ val }}
+                    {% endfor %}
+            </table>
+        {% endif %}
+
+        {% if data.metadata.custom_metadata is defined and data.metadata.custom_metadata|length > 0 %}
+           <h3>Custom Metadata</h3><p><table width="90%" class="pagesectable"><tr><th>Key<th>Value
+
+            {% for key, val in data.metadata.custom_metadata %}
+                <tr><td>{{ key }}<td>{{ val }}
+            {% endfor %}
+            </table>
+        {% else %}
+            <h3>Custom Metadata</h3><p>No custom metadata exists for this file.
+        {% endif %}
+            <p><a href="metadata?edit={{ file_id }}&redir={{ ("player?id=" ~ file_id)|url_encode }}"><button>Modify Metadata</button></a>
+    </div>
+{% endif %}
+
+{% if data.users is defined %}
+    <div id="info-tab-3" class="info-tab">
+        <div id="receipt_container" class="player_tab_item"><a id="users-tab"></a>
+        {% if data.users.viewed is defined and data.users.viewed|length > 0 %}
+            <h3>Who viewed this file
+            {% if is_audio_visual == true %}
+                <button class="img-button tooltip" title="Show combined heatmap" style="background-image:url('img/Heatmaps.svg')" onclick="viewHeatmap('-1', '')" />
+            {% endif %}
+
+            </h3>
+            <table>
+                {% for user in data.users.viewed %}
+                    <tr><td><a href="profile?view={{ user.id }}"><img src="{{ user.avatar }}" class="avatar" />
+                    <span class="avatar">{{ user.name }}</span></a>
+                    <td><span title="Views/Downloads">{{ user.views }} / {{ user.downloads }}</span>
+                    <td>{% if user.date is defined %}{{ user.date }}{% endif %}
+
+                    {% if is_audio_visual == true %}
+                        <td><button class="img-button tooltip" title="Show user heatmap" style="background-image:url('img/Heatmaps.svg')" onclick="viewHeatmap('{{ user.id }}', '')" />
+                    {% endif %}
+                {% endfor %}
+           </table>
+        {% endif %}
+
+    {% if data.users.unviewed is defined and data.users.unviewed|length > 0 %}
+        <h3 id="unviewed-heading">Unviewed</h3>
+        <table>
+            {% for user in data.users.unviewed %}
+                <tr><td><a href="profile?view={{ user.id }}"><img src="{{ user.avatar }}" class="avatar" />
+                <span class="avatar">{{ user.name }}</span></a>
+                <td><div class="user-watch{% if user.is_watched %} unwatch{% endif %} tooltip" title="Be alerted when this user views the file" data-id="{{ user.id }}"></div>
+            {% endfor %}
+        </table>
+    {% endif %}
+        </div>
+    </div>
+{% endif %}
+
+{% if data.history is defined %}
+    <div id="info-tab-4" class="info-tab">
+        {% if data.history.history is defined and data.history.history|length > 0 %}
+            <table class="pagesectable" style="width:100%">
+
+                {% for event in data.history.history %}
+                    <tr><td>{{ event.date }}<td>{{ event.description|raw }}
+                {% endfor %}
+
+            </table>
+        {% else %}
+            <center>No history found. This file may not have been updated recently.</center>
+        {% endif %}
+
+        {% if project_id > 0 and is_project_admin %}
+            <p><a href="history?project={{ project_id }}"><button class="actionbtn">View Project History</button></a>
+        {% endif %}
+    </div>
+{% endif %}

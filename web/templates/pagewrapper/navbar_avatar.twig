@@ -1,0 +1,38 @@
+    <div id="avatar-container">
+        {% if user_is_logged_in %}
+            <a id="user_dropdown_link" href="Javascript:userDropdownClicked();">
+                <div id="user_dropdown_box">
+                    <div id="alert_off_icon"{% if incognito_mode %} style="display:block"{% endif %}></div>
+                    {% if avatar %}
+                        <img src="{{ relative_root }}{{ avatar }}" class="avatar" />
+                    {% else %}
+                        <img src="{{ relative_root }}avatar?name={{ user_name }}" class="avatar" />
+                    {% endif %}
+                    <div class="user-name">{{ user_name }}</div>
+                    <div>&#x25BE;</div>
+                </div></a>
+            <ul id="user_dropdown" style="display:none" class="menu">
+
+                {% if should_show_account_items %}
+                <li><a href='{{ relative_root }}account'>Account</a>
+
+                    {% if should_show_favorites %}
+                    <a href="{{ relative_root }}favorites?project={{ project_id }}"><li>Favorites</a>
+                    {% endif %}
+
+                    {% if is_cloud %}
+                <li><a href="{{ relative_root }}subscription">Subscription</a>
+                <li><a href="{{ relative_root }}linked_accounts">Linked Accounts</a>
+                <li><a href="{{ relative_root }}server\">Server Licenses</a>
+                    {% endif %}
+                    {% endif %}
+
+                <li><a href="{{ relative_root }}resources">Apps</a>
+                <li{% if incognito_mode %} class="ui-checked"{% endif %}>
+                    <a id="alert_toggle" href="#" onclick="toggleAlerts();">Incognito Mode</a>
+                <li>
+                    <a href="{{ relative_root }}logout{% if dest != "" %}?dest={{ dest }}{% endif %}">Logout</a>
+
+            </ul>
+        {% endif %}
+    </div>

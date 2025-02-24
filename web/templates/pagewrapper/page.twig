@@ -1,0 +1,10 @@
+<div id="page">
+    <div id="avatar-container">
+        {% if not user_is_logged_in and should_show_login_button %}
+            <a href="{{ relative_root }}login">
+                <button id="login" class="login">Login</button>
+            </a>
+        {% endif %}
+    </div>
+    {{ extra_wrapper_content|raw }}
+<div id="content">

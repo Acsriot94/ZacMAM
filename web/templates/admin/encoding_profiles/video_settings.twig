@@ -1,0 +1,78 @@
+<table>
+    <tr>
+        <td>Maximum Frame Width
+            <span class="hover-help" title="The maximum frame width this profile will convert to. If the resolution is smaller than this, it won\'t be enlarged."></span>
+        <td><input type="number" name="video_max_frame_width" placeholder="e.g. 1920" value="{{ video_max_frame_width }}"/>
+    <tr>
+        <td>Codec
+        <td><select name="video_codec">
+            <option value="h264">H.264</option>
+        </select>
+    <tr>
+        <td>H.264 Profile <span class="hover-help" title="The profile controls how computationally difficult it is to play back the file. Higher levels are better quality but may play poorly on low-end devices."></span>
+        <td><select name="video_h264_profile">
+                <option value="baseline"{% if video_h264_profile == "baseline" %} selected="selected"{% endif %}>Baseline</option>
+                <option value="main"{% if video_h264_profile == "main" %} selected="selected"{% endif %}>Main</option>
+                <option value="high"{% if video_h264_profile == "high" %} selected="selected"{% endif %}>High</option>
+            </select>
+    <tr>
+        <td>H.264 Level <span class="hover-help" title="This controls how compatible the video is with older players. Higher resolutions require a higher level."></span>
+        <td><select name="video_h264_level">
+                <option value="3.2"{% if video_h264_level == "3.2" %} selected="selected"{% endif %}>3.2</option>
+                <option value="4.0"{% if video_h264_level == "4.0" %} selected="selected"{% endif %}>4.0</option>
+                <option value="4.1"{% if video_h264_level == "4.1" %} selected="selected"{% endif %}>4.1</option>
+                <option value="4.2"{% if video_h264_level == "4.2" %} selected="selected"{% endif %}>4.2</option>
+                <option value="5.0"{% if video_h264_level == "5.0" %} selected="selected"{% endif %}>5.0</option>
+                <option value="5.1"{% if video_h264_level == "5.1" %} selected="selected"{% endif %}>5.1</option>
+                <option value="5.2"{% if video_h264_level == "5.2" %} selected="selected"{% endif %}>5.2</option>
+                <option value="6.0"{% if video_h264_level == "6.0" %} selected="selected"{% endif %}>6.0</option>
+                <option value="6.1"{% if video_h264_level == "6.1" %} selected="selected"{% endif %}>6.1</option>
+                <option value="6.2"{% if video_h264_level == "6.2" %} selected="selected"{% endif %}>6.2</option>
+            </select>
+    <tr>
+        <td>Minimum Bitrate
+        <td><input type="number" name="video_min_bitrate" placeholder="e.g. 3000" value="{{ video_min_bitrate }}"/> Kbps
+    <tr>
+        <td>Average Bitrate
+        <td><input type="number" name="video_avg_bitrate" placeholder="e.g. 5000" value="{{ video_avg_bitrate }}"/> Kbps
+    <tr>
+        <td>Maximum Bitrate
+        <td><input type="number" name="video_max_bitrate" placeholder="e.g. 7000" value="{{ video_max_bitrate }}"/> Kbps
+    <tr>
+        <td>Speed Preset <span class="hover-help" title="Slower speeds are higher quality."></span>
+        <td><select name="speed">
+                <option value="faster"{% if speed == "faster" %} selected="selected"{% endif %}>Faster</option>
+                <option value="fast"{% if speed == "fast" %} selected="selected"{% endif %}>Fast</option>
+                <option value="medium"{% if speed == "medium" %} selected="selected"{% endif %}>Medium</option>
+                <option value="slow"{% if speed == "slow" %} selected="selected"{% endif %}>Slow</option>
+                <option value="slower"{% if speed == "slower" %} selected="selected"{% endif %}>Slower</option>
+            </select>
+    <tr>
+        <td>Audio Codec
+        <td><select name="audio_codec">
+                <option value="aac">AAC</option>
+            </select>
+    <tr>
+        <td>Audio Sample Rate
+        <td><select name="audio_sample_rate">
+                <option value="8000"{% if audio_sample_rate == 8000 %} selected="selected"{% endif %}>8 KHz</option>
+                <option value="11025"{% if audio_sample_rate == 11025 %} selected="selected"{% endif %}>11.025 KHz</option>
+                <option value="16000"{% if audio_sample_rate == 16000 %} selected="selected"{% endif %}>16 KHz</option>
+                <option value="22050"{% if audio_sample_rate == 22050 %} selected="selected"{% endif %}>22.05 KHz</option>
+                <option value="44100"{% if audio_sample_rate == 44100 %} selected="selected"{% endif %}>44.1 KHz</option>
+                <option value="48000"{% if audio_sample_rate == 48000 %} selected="selected"{% endif %}>48 KHz</option>
+                <option value="88200"{% if audio_sample_rate == 88200 %} selected="selected"{% endif %}>88.2 KHz</option>
+                <option value="96000"{% if audio_sample_rate == 96000 %} selected="selected"{% endif %}>96 KHz</option>
+                <option value="176400"{% if audio_sample_rate == 176400 %} selected="selected"{% endif %}>176.4 KHz</option>
+                <option value="192000"{% if audio_sample_rate == 192000 %} selected="selected"{% endif %}>192 KHz</option>
+            </select>
+    <tr>
+        <td>Audio Average Bitrate
+        <td><input type="number" name="audio_avg_bitrate" placeholder="e.g. 128" value="{{ audio_avg_bitrate }}"/> Kbps
+<!--    <tr>
+        <td>Audio Mixdown
+        <td>
+            <input type="radio" name="audio_mixdown" value="0"{% if audio_mixdown != 1 %} checked="checked"{% endif %}>Mixdown to stereo
+            <input type="radio" name="audio_mixdown" value="1"{% if audio_mixdown == 1 %} checked="checked"{% endif %}>Keep tracks as-is
+            -->
+</table>

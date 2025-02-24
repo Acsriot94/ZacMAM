@@ -1,0 +1,4 @@
+<div class="status-text">Enter your email address to login.</div>
+<input type="email" name="email" placeholder="Email" value="{{ email }}" autofocus />
+<input type="submit" name="submit" value="Continue">
+{% if should_show_register_link  %}<div style="margin-top: 15px; text-align: center"><a href="register">Register for the 15-day trial</a></div>{% endif %}

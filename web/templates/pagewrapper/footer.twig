@@ -1,0 +1,29 @@
+<div id="footer"><span id="footer_info" class="nomobile">{{ footer_info_text|raw }}</span>
+    <div id="navwrapper">
+        <div id="nav_left">
+            {% if is_cloud %}<a href="https://www.digitalrebellion.com/contact" target="_blank">Contact Us</a> {% endif %}
+            {% if should_show_help %}<a href="https://www.kollaborate.tv/help" target="_blank">Help</a>{% endif %}
+        </div>
+    </div>
+
+    {% if should_show_storage %}
+    <div id="storage_wrapper">
+        <a href="{{ relative_root }}trash{% if project_id > 0 %}?project_id={{ project_id }}{% endif %}"><div id="trash" class="tooltip" title="Trash"><div class="trash-icon"></div><span id="trash-total" class="nomobile">{% if trash_size_bytes > 0 %}{{ trash_size }}{% endif %}</span></div></a>
+        {% if is_project_admin %}<a href="{{ relative_root }}usage">{% endif %}
+            <div id="storage" class="{{ storage_status_class }}">{{ used_storage_string }}</div>
+            {% if is_project_admin %}</a>{% endif %}
+    </div>
+    {% endif %}
+</div>
+
+{% if should_show_feedback %}
+    <div id="feedback-slide-out" class="slide-out-div">
+        <a class="handle">Feedback</a>
+        <h2>Feedback</h2>
+        Give feedback about Kollaborate to Digital Rebellion.
+        <form id="feedbackForm" action="feedback" method="post">
+            <textarea id="feedbackMessage"></textarea>
+            <p><input style="float:right;margin-right:10px" type="button" id="feedbackSubmit" class="actionbtn" value="Send">
+        </form>
+    </div>
+{% endif %}

@@ -1,0 +1,24 @@
+<div id="subtitle_export_dialog" style="display:none;z-index:110000">
+    <form id="subtitle-export-form" action="export" method="get" action="export">
+        <input type="hidden" name="subtitles" value="{{ file_id }}">
+        <table width="100%">
+            <tr><td>Language:
+                <td><select name="language" id="subtitle_export_language" style="width:100%">
+
+                {% for name, code in languages %}
+                    <option value="{{ code }}"{% if code == selected_lang %} selected{% endif %}>{{ name }}</option>
+                {% endfor %}
+            </select>
+            <tr><td>Format:
+                <td><select name="format" id="subtitle_export_format" style="width:100%">
+                        <option value="0">SRT
+                        <option value="1">WebVTT
+                        <option value="5">TTML
+                        <option value="4">CSV
+                        <option value="2">Plain Text (with timing)
+                        <option value="3">Plain Text (paragraphs)
+                    </select>
+        </table>
+        <p><input style="float:right;margin-right:5px" type="submit" value="Download" />
+    </form>
+</div>

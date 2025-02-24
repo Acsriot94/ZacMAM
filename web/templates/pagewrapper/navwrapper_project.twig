@@ -1,0 +1,124 @@
+<div id="navwrapper">
+    <div id="nav_left">
+        <div id="nav_project">
+            <div id="project_dropdown_container"><a href="Javascript:projectDropdownClicked();">
+                    <div id="project_dropdown_box"><b>{{ cur_project_title }}</b> <span
+                                id="project_dropdown_arrow">&#x25BE;</span></div>
+                </a>
+                <ul id="project_dropdown" style="display:none;padding:5px;position:absolute;left:5px;"
+                    class="menu">
+                    {% for project in projects %}
+                        <li><a href="{{ relative_root }}projects?select={{ project.id }}">{{ project.title }}</a>
+                    {% endfor %}
+
+                    {% if projects|length > 1 %}<li>-{% endif %}
+
+                    <li><a href="{{ relative_root }}projects">Projects...</a>
+                </ul>
+            </div>
+            <div id="nav_right" class="nomobile">
+                {% if should_show_alerts %}
+                    <a href="#" onclick="eventDropdownClicked();" title="Alerts" class="tooltip horizontal">
+                        <div id="event-icon"></div>
+                        {% if alert_count > 0 %} <span class='alert-badge' id='event_badge'>{{ alert_count }}</span>{% endif %}
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <div id="nav-links">
+            {% if is_adobe_panel %}
+                <div class="nav-link{% if nav_name == 'files' %} selected{% endif %}"><a href="{{ relative_root }}files">
+                        <span>Files</span></a></div>
+                <div class="nav-link{% if nav_name == 'todo' %} selected{% endif %}"><a href="{{ relative_root }}panel/todo">To-Do
+                        List</a></div>
+            <div class="nav-link"><a href="{{ relative_root }}logout">Logout</a></div>
+            {% else %}
+                {% if should_show_dashboard %}
+                    <div class="nav-link{% if nav_name == 'dashboard' %} selected{% endif %}">
+                        <a href="{{ relative_root }}dashboard?project={{ project_id }}" title="See an overview of project activity" class="tooltip horizontal">
+                            <div class="navlink-icon header-icon-dashboard"></div>Dashboard
+                        </a>
+                    </div>
+                {% endif %}
+
+                <div class="nav-link{% if nav_name == 'files' %} selected{% endif %}">
+                    <a href="{{ relative_root }}files?project={{ project_id }}" class="tooltip horizontal" title="Upload files to your project">
+                    <div class="navlink-icon header-icon-files"></div>
+                    Files{% if file_alert_count > 0 %} <span class='alert-badge'>{{ file_alert_count }}</span>{% endif %}
+                    </a>
+                </div>
+
+            {% if nav_name == 'files' or nav_name == 'tags' or nav_name == 'trash' %}
+                <div class="nav-link nav-link-subitem{% if nav_name == 'tags' %} selected{% endif %}">
+                    <a href="{{ relative_root }}tags?project={{ project_id }}" class="tooltip horizontal" original-title="View all file tags across the whole project">
+                        <div class="navlink-icon header-icon-tag"></div>Tags
+                    </a>
+                </div>
+
+                <div class="nav-link nav-link-subitem{% if nav_name == 'trash' %} selected{% endif %}">
+                    <a href="{{ relative_root }}trash?project_id={{ project_id }}&project_relative" class="tooltip horizontal" original-title="View project trash">
+                        <div class="navlink-icon header-icon-trash"></div>Trash
+                    </a>
+                </div>
+                {% endif %}
+
+                {% if should_show_users %}
+                    <div class="nav-link{% if nav_name == 'users' %} selected{% endif %}"><a href="{{ relative_root }}users?project={{ project_id }}"
+                     class="tooltip horizontal"
+                     title="Invite team members to the project">
+                        <div class="navlink-icon header-icon-team"></div>
+                            Team</a></div>
+
+                    {% if nav_name == 'users' or nav_name == 'roles' %}
+                        <div class="nav-link nav-link-subitem{% if nav_name == 'roles' %} selected{% endif %}">
+                            <a href="{{ relative_root }}roles?project={{ project_id }}" class="tooltip horizontal" original-title="Manage user permission roles">
+                                <div class="navlink-icon header-icon-roles"></div>Roles
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endif %}
+
+                {% if should_show_tasks %}
+                <div class="nav-link{% if nav_name == 'tasks' %} selected{% endif %}"><a href="{{ relative_root }}tasks?project={{ project_id }}"
+                   class="tooltip horizontal"
+                   title="Set tasks for other users">
+                    <div class="navlink-icon header-icon-tasks"></div>
+                        Tasks{% if task_alert_count > 0 %} <span class='alert-badge'>{{ task_alert_count }}</span>{% endif %}</a></div>
+                {% endif %}
+
+                {% if should_show_share %}
+                    <div class="nav-link{% if nav_name == 'share' %} selected{% endif %}"><a href="{{ relative_root }}share?project={{ project_id }}"
+                     class="tooltip horizontal"
+                     title="Share files outside the project">
+                        <div class="navlink-icon header-icon-share"></div>
+                            Share</a></div>
+                {% endif %}
+
+                {% if should_show_sessions %}
+                    <div class="nav-link{% if nav_name == 'sessions' %} selected{% endif %}"><a href="{{ relative_root }}sessions?project={{ project_id }}"
+                       class="tooltip horizontal"
+                       title="Take part in shared review sessions">
+                        <div class="navlink-icon header-icon-sessions"></div>
+                        Sessions{% if session_alert_count > 0 %} <span class='alert-badge'>{{ session_alert_count }}</span>{% endif %}
+                        </a></div>
+                {% endif %}
+
+                {% if should_show_workflows %}
+                    <div class="nav-link{% if nav_name == 'workflows' %} selected{% endif %}"><a href="{{ relative_root }}workflows?project={{ project_id }}"
+                     class="tooltip horizontal nomobile"
+                     title="Set automatic file and encoding actions">
+                        <div class="navlink-icon header-icon-workflows"></div>
+                            Workflows</a></div>
+                {% endif %}
+
+                {% if should_show_history %}
+                    <div class="nav-link{% if nav_name == 'history' %} selected{% endif %}"><a href="{{ relative_root }}history?project={{ project_id }}"
+                       class="tooltip horizontal nomobile"
+                       title="View recent project activity">
+                        <div class="navlink-icon header-icon-history"></div>
+                            History</a></div>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</div>

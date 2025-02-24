@@ -1,0 +1,12 @@
+{% if data.info is defined %}
+    <li><a href="#info-tab-1">Information</a>
+{% endif %}
+{% if data.metadata is defined %}
+<li><a href="#info-tab-2">Metadata</a>
+    {% endif %}
+    {% if data.users is defined %}
+<li><a href="#info-tab-3">Users</a>
+    {% endif %}
+    {% if data.history is defined %}
+<li><a href="#info-tab-4">History</a>
+    {% endif %}

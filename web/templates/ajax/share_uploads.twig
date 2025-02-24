@@ -1,0 +1,15 @@
+<tr data-link-id="{{ link_id }}">
+    <td><a href="#" onclick="toggleUploadStats('{{ link_id }}')">{{ link_name|u.truncate(35) }} &#x25BE</a>
+    <td><a class="tooltip" href="profile?view="{{ user_id }}" title="{{ user_name }}"><img class="avatar small" src="{{ avatar_url }}" /></a>
+    <td>{{ views }} / <span{% if max_uploads > 0 and uploads >= max_uploads %} class="expired"{% endif %}>{{ uploads }}</span>
+    <td>{{ date_string }}
+    <td>{% if exp_date > 0 %}<span{% if expired == 1 %} class="expired"{% endif %}>{{ exp_date_string }}</span>{% else %}Never{% endif %}
+    <td>{% if requires_password == 1 %}<text-input-copy-button style="width:120px" readonly="readonly" value="{{ password }}"></text-input-copy-button>{% else %}(None){% endif %}
+    <td><textarea-copy-button style="width:100%;max-width:600px;min-height:2.7em" readonly="readonly" autoselect="autoselect" value="{{ link_url }}"></textarea-copy-button>
+    <td><a href="javascript:shareDropdownClicked(this,'{{ link_id }}')"><img src="img/Dropdown.svg" /></a>
+        <ul class="menu" id="share_dropdown_{{ link_id }}" style="display:none;right:2px;">
+            <li><a href="share_modify?email={{ link_id }}">Share Link...</a>
+            <li><a href="share_upload?edit={{ link_id }}">Edit...</a>
+            <li><a href="share_modify?reset={{ link_id }}">Reset Counts</a>
+            <li><a href="share_modify?delete={{ link_id }}">Delete</a>
+        </ul>

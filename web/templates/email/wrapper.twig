@@ -1,0 +1,30 @@
+<html>
+<body style="font-family:Helvetica;font-size:15px;background-color:#f0f0f0;line-height:1.2;letter-spacing:0.1px;padding:15px">
+<div style="width:100%;max-width:700px;margin-left:auto;margin-right:auto;background-color:#fff;">
+<a href="{{ site_url }}">
+    <div style="height:40px;background-color:#333;padding:10px;overflow:hidden;border-bottom:1px solid #878787;">
+        <div style="background-image:url('{{ logo_url }}');height:100%;max-width:200px;background-size:contain;background-repeat:no-repeat;background-position:center;margin:0 auto;"></div>
+    </div>
+</a>
+<div style="padding:40px 10px;width:100%;max-width:600px;margin:0 auto;">
+<div style="padding:1px 10px 10px 10px;border-bottom:1px solid #a7a7a7;">
+{{ body|raw }}
+</div>
+<div style="font-size:small;padding-top:10px">
+{% if has_reply_to == 0 %}
+    Please do not reply to this email. Replies to this message are routed to an unmonitored mailbox.
+{% endif %}
+
+{% if unsubscribe_url %}
+    <p>Too many emails? <a href="{{ unsubscribe_url|raw }}">Unsubscribe</a> from {{ unsubscribe_type }} alerts.
+{% endif %}
+
+{% if user_id > 0 %}
+    <p>Forgotten your login details? <a href="{{ site_url }}/reset_password">Reset your password</a>.
+{% endif %}
+
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<div class="form-dialog">
+    <h1 class="register-title"><img src="img/K-Icon_White.svg"/> Kollaborate Free Trial</h1>
+    <div class="register-description">Free 15-day trial with {{ trial_storage_gb }} GB storage space and up to {{ trial_users }} users per project.</div>
+    <form method="post" action="register">
+        <div class="form-container">
+            <div class="form-row">
+                <div class="form-column">First name</div>
+                <div class="form-column">
+                    <input type="text" name="first_name" value="{{ first_name }}" autofocus required />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">Last name</div>
+                <div class="form-column">
+                    <input type="text" name="last_name" value="{{ last_name }}" required />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">Email address</div>
+                <div class="form-column">
+                    <input type="email" name="email" value="{{ email }}" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">Password</div>
+                <div class="form-column">
+                    <input type="password" name="passwd_1" id="passwd_1" value="" required /> <pass-strength linkto="passwd_1"></pass-strength>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">Re-enter password</div>
+                <div class="form-column">
+                    <input type="password" name="passwd_2" value="" required />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">Mailing list</div>
+                <div class="form-column">
+                    <check-box id="mailing_list" name="mailing_list" {% if mailing_list %} checked="checked"{% endif %} text="Receive updates on new Kollaborate features and other Digital Rebellion products"></check-box>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">Security code</div>
+                <div class="form-column" style="text-align: center">
+                    <img src="include/third_party/securimage/securimage_show.php?sid={{ sid }}" id="image" alt="" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column"></div>
+                <div class="form-column" style="text-align: center">
+                    <input style="width:100%;max-width:200px;" type="text" name="imagetext" placeholder="Security code" required />
+                </div>
+            </div>
+        </div>
+        <div class="register-button-container">
+            <input id="btn-submit" type="submit" name="register" value="Continue &gt;" />
+        </div>
+    </form>
+    <div style="margin-top:40px;font-size:15px">Your data is stored securely and we will never sell your information to third-parties. <a href="privacy">More information on our privacy policy</a></div>
+</div>

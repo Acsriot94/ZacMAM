@@ -1,0 +1,42 @@
+<div id="navwrapper">
+    <div id="nav_left">
+        <div id="nav-links">
+            <div class="nav-link{% if nav_name == 'projects' %} selected{% endif %}">
+                <a href="{{ relative_root }}projects">Projects</a>
+            </div>
+            {% if not hide_private_files %}
+                <div class="nav-link{% if nav_name == 'files' %} selected{% endif %}">
+                    <a href="{{ relative_root }}files?project=-1">My Private Files</a>
+                </div>
+            {% endif %}
+            <div class="nav-link{% if nav_name == 'global_search' %} selected{% endif %}">
+                <a href="{{ relative_root }}global_search">Global Search</a>
+            </div>
+
+            {% if is_adobe_panel %}
+                <div class="nav-link">
+                    <a href="{{ relative_root }}logout">Logout</a>
+                </div>
+            {% else %}
+                <div class="nav-link{% if nav_name == 'trash' %} selected{% endif %}">
+                    <a href="{{ relative_root }}trash">Trash</a>
+                </div>
+                <div class="nav-link{% if nav_name == 'apps' %} selected{% endif %}">
+                    <a href="{{ relative_root }}resources">Apps</a>
+                </div>
+
+                {% if not is_self_hosted %}
+                    <div class="nav-link{% if nav_name == 'server' %} selected{% endif %}">
+                        <a href="{{ relative_root }}/server">Server Licenses</a>
+                    </div>
+                {% endif %}
+
+                {% if is_server_admin %}
+                    <div class="nav-link{% if nav_name == 'admin' %} selected{% endif %}">
+                        <a href="{{ relative_root }}admin/">Admin Area</a>
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</div>

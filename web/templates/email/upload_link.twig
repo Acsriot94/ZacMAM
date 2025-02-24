@@ -1,0 +1,30 @@
+{{ user_name }} requested that you upload the following files to {{ site_name }}:
+
+<div style="text-align:center;padding:15px">
+    <b>{{ link_description }}</b>
+
+    {% if custom_message %}
+        <p>{{ custom_message}}
+    {% endif %}
+</div>
+
+<p>Use the following link to upload:
+<br><a href="{{ link_url }}">{{ link_url }}</a>
+
+
+{% if link_require_pass == 1 %}
+    <p>You can access the uploader with the password{% if separate_password %} you will receive shortly in a separate email{% else %}: <b>{{ link_password }}</b>{% endif %},
+    then drag files onto the page to upload them.
+{% endif %}
+
+{% if link_exp_date > 0 %}
+    <p>This link will expire on {{ link_exp_date_string }}.
+{% endif %}
+
+{% if show_recipients and recipients|length > 0 %}
+    <p>Also sent to:
+    {% for recipient in recipients %}
+        {% if not loop.first %}, {% endif %}
+        {{ recipient }}
+        {% endfor %}
+{% endif %}

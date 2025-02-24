@@ -1,0 +1,36 @@
+<tr data-id="{{ project_id }}" data-can-edit="{{ can_edit }}" data-is-owner="{{ is_owner }}" data-is-public-owner="{{ is_public_owner }}" data-is-project-admin="{{ is_project_admin }}" data-subscribed="{{ subscribed }}">
+    <td class="nomobile">
+        <a href="projects?select={{ project_id }}"><div class="project-thumb" style="background-image:url('{{ thumbnail_url }}')"></div></a></td>
+    <td><h3><a href="projects?select={{ project_id }}">{{ title }}</a>
+            {% if alert_count > 0 %}
+                <a href="dashboard?project={{ project_id }}"><span class="alert-badge nomobile">{{ alert_count }}</span></a>
+    {% endif %}
+    </h3>
+    {% if client != "" %}
+        <p><span class="nomobile">{{ client }}</span>
+    {% endif %}
+    {% if description != "" %}
+        <p><span class="project-description nomobile">{{ description }}</span>
+    {% endif %}
+        <div class="project-controls nopanel"><div class="project-control project-mute{% if muted == 0 %} unmuted{% endif %} nomobile"><a href="projects?mute={{ project_id }}" title="{% if muted == 1 %}Unmute{% else %}Mute{% endif %}" class="tooltip"><div class="fa-icon fa-icon-bell-slash"></div></a></div>
+            <div class="project-control"><a href="download_folder?project={{ project_id }}&dept=-1&path=%2F" title="Download" class="tooltip"><div class="fa-icon fa-icon-download-cloud"></div></a></div></div>
+        <div class="tag-view small">
+            {% for tag in tags %}
+                <a href="projects?search={{ tag|url_encode }}"><div class="tag">{{ tag }}</div></a>
+            {% endfor %}
+        </div>
+    </td>
+    <td class="nomobile">
+        <a href="profile?view={{ owner_id }}"><img class="avatar" src="{{ owner_avatar_url }}&type=small" loading="lazy">{{ owner_name }}</a></td>
+    <td>{{ last_accessed }}</td>
+    <td class="nomobile">
+        <a href="users?project={{ project_id }}">{{ user_count }}</a>
+    </td>
+    <td class="nomobile">
+        <a href="files?project={{ project_id }}">{{ file_count }}</a>
+    </td>
+    <td class="nomobile">{{ total_storage }}</td>
+    <td>
+        <a class="nopanel" href="#" id="project_dropdown_{{ project_id }}" onclick="showMenuForProject({{ project_id }}, null)"><img src="img/Dropdown.svg"></a>
+    </td>
+</tr>

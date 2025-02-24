@@ -1,0 +1,30 @@
+<table>
+    <tr>
+        <td>Codec
+        <td><select name="audio_codec">
+            <option value="mp3">MP3</option>
+        </select>
+    <tr>
+        <td>Audio Sample Rate
+        <td><select name="audio_sample_rate">
+                <option value="8000"{% if audio_sample_rate == 8000 %} selected="selected"{% endif %}>8 KHz</option>
+                <option value="11025"{% if audio_sample_rate == 11025 %} selected="selected"{% endif %}>11.025 KHz</option>
+                <option value="16000"{% if audio_sample_rate == 16000 %} selected="selected"{% endif %}>16 KHz</option>
+                <option value="22050"{% if audio_sample_rate == 22050 %} selected="selected"{% endif %}>22.05 KHz</option>
+                <option value="44100"{% if audio_sample_rate == 44100 %} selected="selected"{% endif %}>44.1 KHz</option>
+                <option value="48000"{% if audio_sample_rate == 48000 %} selected="selected"{% endif %}>48 KHz</option>
+                <option value="88200"{% if audio_sample_rate == 88200 %} selected="selected"{% endif %}>88.2 KHz</option>
+                <option value="96000"{% if audio_sample_rate == 96000 %} selected="selected"{% endif %}>96 KHz</option>
+                <option value="176400"{% if audio_sample_rate == 176400 %} selected="selected"{% endif %}>176.4 KHz</option>
+                <option value="192000"{% if audio_sample_rate == 192000 %} selected="selected"{% endif %}>192 KHz</option>
+            </select>
+    <tr>
+        <td>Average Bitrate
+        <td><input type="number" name="audio_avg_bitrate" placeholder="e.g. 128" value="{{ audio_avg_bitrate }}"/> Kbps
+<!--    <tr>
+        <td>Audio Mixdown
+        <td>
+            <input type="radio" name="audio_mixdown" value="0"{% if audio_mixdown != 1 %} checked="checked"{% endif %}>Mixdown to stereo
+            <input type="radio" name="audio_mixdown" value="1"{% if audio_mixdown == 1 %} checked="checked"{% endif %}>Keep tracks as-is
+-->
+</table>

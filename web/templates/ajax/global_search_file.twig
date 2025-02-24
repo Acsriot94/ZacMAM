@@ -1,0 +1,5 @@
+<tr data-file-id="{{ id }}">
+    <td><a href="{% if file_type_id == 4 %}files?project={{ project_id }}&folder={{ path|url_encode }}&dept={{ department_id }}{% else %}player?id={{ id }}{% endif %}" target="_blank"><file-thumb size="small" src="{{ thumbnail }}" file-title="{{ title }}"></file-thumb></a></td>
+    <td><a href="projects?select={{ project_id }}" target="_blank">{{ project_title }}</a></td>
+    <td><a href="files?project={{ project_id }}&folder={{ parent_path|url_encode }}&dept={{ department_id }}{% if latest_revision == false %}&rev={{ primary_id }}{% endif %}&show={{ id }}" target="_blank"><div class="global-search-folder-location"><thumbnail-image size="micro" src="{% if department_id > 0 %}img/Dept_Folder.svg{% else %}img/Folder.svg{% endif %}"></thumbnail-image>{%  if department_id > 0 %}{{ department_name }}{% endif %}{{ parent_path }}</div></a>
+</tr>

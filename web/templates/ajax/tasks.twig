@@ -1,0 +1,44 @@
+<tr data-id="{{ id }}">
+    <td valign="middle"><check-box id="taskSelector{{ id }}" class="taskSelector" data-value="{{ id }}" onchange="selectionChanged();" small="small"></check-box>
+<td><a href="task?id={{ id }}">{{ title }}{% if pinned == 1 %}<img src="img/Pin.svg" />{% endif %}</a>
+<div class="tag-view small">
+    {% for tag in tags %}
+        <a href="tasks?search={{ tag|url_encode }}"><div class="tag">{{ tag }}</div></a>
+    {% endfor %}
+</div>
+<td valign="middle" height="40">{% if file_id > -1 %}<a href="#" onclick="fileLinkClick(event)"><file-thumb size="mini" type="{{ file_type_name }}" file-title="{{ file_title|u.truncate(20) }}" title="{{ file_title }}" src="{{ file_icon_url }}" data-url="{{ file_url }}" data-file-id="{{ file_id }}"></file-thumb></a>{% endif %}
+<td><div id="task_status_icon" class="task-status {{ status_class|lower }}"></div>
+
+{% if can_edit == 1 %}
+    <select class="task_status_dropdown noborder" data-id="{{ id }}">
+    <option value="0"{% if status == 0 %} selected="on"{% endif %}>Pending
+        <option value="1"{% if status == 1 %} selected="on"{% endif %}>In Progress
+        <option value="2"{% if status == 2 %} selected="on"{% endif %}>Needs Approval
+        <option value="3"{% if status == 3 %} selected="on"{% endif %}>Completed
+</select>
+{% else %}
+{{ status_string}}
+{% endif %}
+{% if can_edit == 1 %}
+    <td><select class="task_priority_dropdown noborder" data-id="{{ id }}">
+        <option value="0"{% if priority == 0 %} selected="on"{% endif %}>Low
+        <option value="1"{% if priority == 1 %} selected="on"{% endif %}>Normal
+        <option value="2"{% if priority == 2 %} selected="on"{% endif %}>High
+    </select>
+{% else %}
+    {{ priority_string}}
+{% endif %}
+
+    <td>{% if due_date > 0 %}<span{% if expired == 1 %} class="expired"{% endif %}>{{ due_date_string }}</span>{% endif %}
+    <td><a href="profile?view={{ owner_id }}"><img class="avatar tooltip" src="{{ owner_avatar_url }}&type=small" title="{{ owner_name }}" /></a>
+    <td>{% if assigned_user_id == -1 %}Unassigned{% else %}<a href="profile?view={{ assigned_user_id }}"><img class="avatar tooltip" src="{{ assigned_user_avatar_url }}&type=small" title="{{ assigned_user_name }}" /></a>{% endif %}
+
+    <td><a href="javascript:taskDropdownClicked(this,{{ id }})"><img src="img/Dropdown.svg"/></a>
+    <ul class="menu" id="task_dropdown_{{ id }}" style="display:none">
+
+    {%  if can_edit == 1 %}<li><a href="task_modify?id={{ id }}">Edit</a>
+        <li><a href="task_modify?pin={{ id }}">{% if pinned == 1 %}Unpin{% else %}Pin{% endif %}</a>
+        <li><a href="task_modify?remove={{ id }}">Remove</a>
+    {% endif %}
+
+    <li><a href="export?task={{ id }}">Export</a></ul>

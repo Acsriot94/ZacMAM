@@ -1,0 +1,17 @@
+<h3 data-recipient-id="{{ recipient_id }}">
+    {% if email != "" %}
+        {{ email }}
+    {% else %}
+        {{ ip_address }}
+    {% endif %}
+</h3>
+<div data-recipient-id="{{ recipient_id }}" style="font-size:13px">
+    {% if email != "" and ip_address != "" %}
+        IP address: {{ ip_address }}<br>
+    {%  endif %}
+    {{ views }} view{% if views != 1 %}s{% endif %}
+    <br>{{ downloads }} download{% if downloads != 1 %}s{% endif %}
+    <br>{{ comments }} comment{% if comments != 1 %}s{% endif %}
+    <br>{% if views > 0 and last_viewed > 0 %}Last viewed: {{ last_viewed_string }}{% endif %}
+    <br>{% if comments > 0 %}Commented as: {{ comment_author_name }}{% endif %}
+</div>

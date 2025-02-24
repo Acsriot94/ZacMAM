@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='stylesheet' href='../dist/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='../css/style-mobile.css' type='text/css' media='all and (max-device-width: 480px)' />
+    <link rel='stylesheet' href='../css/dark.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='../css/tipsy.css' type='text/css' media='all' />
+    <script src="../js/third_party/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="../js/third_party/jquery-ui-1.10.1.custom.js" type="text/javascript"></script>
+    <link href="../css/smoothness/jquery-ui-1.10.1.custom.css" rel="stylesheet">
+    <script src="../js/third_party/jquery.tabSlideOut.v1.3.js" type="text/javascript"></script>
+    <script src="../js/core.js" type="text/javascript"></script>
+    <script src="../js/third_party/jquery.tipsy.js" type="text/javascript"></script>
+    <style>
+        .install-success {
+            background:url('../img/Success.svg');
+            width:48px;
+            height:48px;
+            background-size: contain;
+        }
+        .install-failed {
+            background:url('../img/Error.svg');
+            width:48px;
+            height:48px;
+            background-size: contain;
+        }
+        .install-banner {
+            border: 2px dotted #a8a8a8;
+            padding: 10px;
+            background-color: #1d4e78;
+            color: #D1D1D1;
+        }
+        td {
+            vertical-align: middle;
+        }
+        li {
+            margin:10px;
+        }
+        table {
+            margin-bottom:30px;
+        }
+        .hover-help {
+            border: 2px solid #ccc;
+            display: inline;
+            padding: 0 7px;
+            border-radius: 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            background-color: #414684;
+            color: #ccc;
+            vertical-align: middle;
+        }
+        .hover-help:after {
+            content: "?";
+        }
+        .tipsy {
+            z-index:99999999;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            reloadTooltips();
+        });
+
+        function reloadTooltips() {
+            if (!isTouchDevice) {
+                $('.tooltip:not(.horizontal), .hover-help.vertical').tipsy({target: 'hover', gravity: $.fn.tipsy.autoNS});
+                $('.tooltip.horizontal, .hover-help:not(.vertical)').tipsy({target: 'hover', gravity: $.fn.tipsy.autoWE});
+            }
+        }
+
+        function toggleContinue(obj) {
+            if (obj.checked) {
+                document.getElementById('cont-btn').disabled = false;
+            } else {
+                document.getElementById('cont-btn').disabled = true;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header"><img style="max-width:50%" src="../img/Kollab_logo.png" /></div>
+    <div id="pagewrapper">
+        <div id="page" style="min-height:300px;width:100%;max-width:800px;margin-left:auto;margin-right:auto;padding-top:20px">

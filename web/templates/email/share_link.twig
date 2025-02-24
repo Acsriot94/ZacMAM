@@ -1,0 +1,29 @@
+{{ user_name }} sent you a {% if file_type_id == 4 %}folder{% else %}file{% endif %} link on <a href="{{ site_url }}">{{ site_name }}</a>.
+
+{% if custom_message %}
+    <p>{{ custom_message }}
+{% endif %}
+
+<div style="margin:20px">
+    <table>
+        <tr>
+            <td><a href="{{ link_url }}"><img src="{{ file_thumbnail_url }}" /></a>
+            <td><b><a href="{{ link_url }}">{{ file_title }}</a></b>
+    </table>
+</div>
+
+{% if link_require_pass == 1 %}
+    You can access the {% if file_type_id == 4 %}folder{% else %}file{% endif %} with the password{% if separate_password %} you will shortly receive in a separate email.{% else %}: <b>{{ link_password }}</b>{% endif %}
+{% endif %}
+
+{% if link_exp_date > 0 %}
+    <p>This link will expire on {{ link_exp_date_string }}.
+{% endif %}
+
+{% if show_recipients and recipients|length > 0 %}
+    <p>Also sent to:
+    {% for recipient in recipients %}
+        {% if not loop.first %}, {% endif %}
+        {{ recipient }}
+        {% endfor %}
+{% endif %}

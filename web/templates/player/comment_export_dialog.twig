@@ -1,0 +1,59 @@
+<div id="comment_export_dialog" style="display:none;z-index:110000">
+    <form id="comment-export-form" action="export" method="get" onsubmit="submitExportComments(event)">
+        <input type="hidden" name="comments" value="{{ file_id }}">
+        <table>
+            <tr><td>Application
+                <td><select name="format" id="comment_export_format" onchange="commentExportFormatChanged()">');
+                        {% if file_type_id == 1 or file_type_id == 2 or file_type_id == 5 %}
+                            <option value="4"{% if selected_app == 4 %} selected{% endif %}>Adobe Premiere Pro
+                            <option value="0"{% if selected_app == 0 %} selected{% endif %}>Final Cut Pro X
+                            <option value="0">Final Cut Pro 7
+                            <option value="1"{% if selected_app == 1 %} selected{% endif %}>Avid
+                            <option value="7"{% if selected_app == 7 %} selected{% endif %}>DaVinci Resolve
+                            <option value="2"{% if selected_app == 2 %} selected{% endif %}>Edius
+                            <option value="6"{% if selected_app == 6 %} selected{% endif %}>EdiCue
+                            <option value="8"{% if selected_app == 8 %} selected{% endif %}>Reaper
+                        {% endif %}
+
+                        <option value="3"{% if selected_app == 3 %} selected{% endif %}>Plain text
+                        <option value="5"{% if selected_app == 5 %} selected{% endif %}>CSV
+                        <option value="10"{% if selected_app == 10 %} selected{% endif %}>TSV
+                        <option value="9"{% if selected_app == 9 %} selected{% endif %}>Print
+                    </select>
+
+            <tr id="comment_export_track_row"><td>Track
+                <td><select name="track">
+
+                        {% for i in 1..10 %}
+                            <option value="{{ i }}"{% if selected_track == i %} selected{% endif %}>V{{ i }}
+                        {% endfor %}
+
+                    </select>
+
+            <tr><td>Colors<td><select name="export_color_filter">
+                <option value="-1"{% if selected_color == -1 %} selected{% endif %}>All colors
+
+                {% set color_array = ['No color','Red','Yellow','Orange','Green','Blue','Turquoise','Pink','Purple','White','Black'] %}
+
+                {% for color in color_array %}
+                    <option value="{{ loop.index0 }}"{% if selected_color == loop.index0 %} selected{% endif %}>{{ color }} only
+                {% endfor %}
+
+            </select>
+
+            <tr><td>Author<td><select name="export_author_filter" id="export_author_filter"><option value="">All</select>
+            <tr><td colspan="2"><check-box id="favorites" name="favorites"{% if select_favorites %} checked="on"{% endif %} text="Favorites only"></check-box>
+            <tr><td colspan="2"><check-box id="todo" name="todo"{% if select_todo %} checked="on"{% endif %} text="To-Do only"></check-box>
+            <tr><td colspan="2"><check-box id="replies" name="replies"{% if select_replies %} checked="on"{% endif %} text="Include replies"></check-box>
+            <tr><td colspan="2"><check-box id="done" name="done"{% if select_done %} checked="on"{% endif %} text="Ignore completed To-Dos"></check-box>
+            <tr><td colspan="2"><check-box id="export_combine_versions" name="combine_versions"{% if select_combine_versions %} checked="on"{% endif %} text="Combine comments from all versions of this file"></check-box>
+
+            {% if file_type_id == 1 or file_type_id == 2 or file_type_id == 5 %}
+                <tr><td colspan="2"><check-box id="combine" name="combine"{% if select_combine %} checked="on"{% endif %} text="Combine notes at the same timecode"></check-box>
+            {% endif %}
+
+            </table>
+        <p>Use <a href="https://www.kollaborate.tv/resources" target="_blank">Marker Import</a> to import into your NLE.
+        <div style="float:right;margin-right:10px"><input type="submit" value="Export"></div>
+    </form>
+</div>
