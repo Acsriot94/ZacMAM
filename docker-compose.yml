@@ -7,11 +7,7 @@ services:
     volumes:
       - type: bind
         target: /kollabserver/storage
-        # Edit the following line to specify the path to your
-        # shared storage drive as your host system sees it
-        # (i.e. if your host OS is macOS, it should be a Mac-type
-        # path starting with /Volumes/)
-        source: /mnt/.ix-apps/docker/volumes/mam/_data
+        source: /home/zgaetano/smb_mount
       - ./web:/var/www:delegated
     depends_on:
       - database
